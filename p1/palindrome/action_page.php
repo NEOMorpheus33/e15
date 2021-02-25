@@ -1,5 +1,7 @@
 <?php
-//Licence: https://bit.ly/2CFA5XY
+// Joseph Fanning 
+//Function Counts Vowels 
+//String variable
 
 function count_Vowels($string)
 {
