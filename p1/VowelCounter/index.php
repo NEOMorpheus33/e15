@@ -1,5 +1,5 @@
-<html>
-<body>
+ <html>
+ <body>
     
  <span style='color:green' <h1></h1>Vowel Counter E1P1 Joseph Fanning</hl> </span>
  
@@ -14,9 +14,9 @@
 
 {
 
-   $string=($_GET['subject']);
+    $string=($_GET['subject']);
   
-   $vowels = array('a','e','i','o','u');
+    $vowels = array('a','e','i','o','u');
     $len = strlen($string);
     $num = 0;
         
@@ -25,20 +25,20 @@
             {
                 $num++;
             }
- echo "$num";
+     echo "$num";
         }
- function countDigits( $string ) 
+     function countDigits( $string ) 
 {
-    return preg_match_all( "/[0-9]/", $string );
+     return preg_match_all( "/[0-9]/", $string );
  
 }
 substr_count($string, ' ');
  
-        echo " Vowel Counter : <span style='color:orange; font-weight:bold;'>". $num."</span>";
- echo "<br>";
+     echo " Vowel Counter : <span style='color:orange; font-weight:bold;'>". $num."</span>";
+     echo "<br>";
  
  
- echo "Space Counter :" . substr_count($string," ");
+     echo "Space Counter :" . substr_count($string," ");
  
     }
     
