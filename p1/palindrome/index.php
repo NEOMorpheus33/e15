@@ -1,7 +1,7 @@
 <!DOCTYPE html>   
 <head>
     <title>e15p1 Palindrome? Project CSCI-E15 Harvard.edu HES</title> 
-    </head>
+</head>
     <meta>
     </meta>
 <body> 
@@ -13,7 +13,7 @@ Is it a Palindrome?: <input type="text" name="num"/><br>
 </form>  
 <?php   
     if($_POST)  
-    {  
+        {  
         //get the value from form  
         $num = $_POST['num'];  
         //reversing the number  
