@@ -3,7 +3,7 @@
 //Vowel Counter function
 //$string Variable
 
-function count_Vowels($string)
+    function count_Vowels($string)
 {
     preg_match_all('/[aeiou]/i', $string, $matches);
     return count($matches[0]);
