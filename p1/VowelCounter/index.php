@@ -1,11 +1,11 @@
 <html>
 <body>
-    <div>
+    
  <span style='color:green' <h1></h1>Vowel Counter E1P1 Joseph Fanning</hl> </span>
  
  <form name="form" action="" method="get">
-  <input type="text" name="subject" id="subject" value="">
-</form>
+ <input type="text" name="subject" id="subject" value="">
+ </form>
  
 <?php 
 
@@ -14,7 +14,7 @@
 
 {
 
- $string=($_GET['subject']);
+   $string=($_GET['subject']);
   
    $vowels = array('a','e','i','o','u');
     $len = strlen($string);
@@ -42,9 +42,6 @@ substr_count($string, ' ');
  
     }
     
-
-
-
- ?>
+?>
 </body>
 </html>
