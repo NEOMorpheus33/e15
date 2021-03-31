@@ -16,11 +16,14 @@
           align-items: center;
         }
         </style>
-    @yield('head')
+        @yield('head')
 </head>
 <body>
+
+<img src='/images/calc.jpg'>
 <h1>Joe's Harvard | HES Grade Calculator</h1>
 
-@yield('content')
+        @yield('content') 
 </body>
-</html>
+</html> 
+
