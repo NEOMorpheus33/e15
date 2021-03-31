@@ -1,7 +1,6 @@
 <?php 
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\GradeCalculatorController;
 
 /* 
@@ -16,5 +15,7 @@ use App\Http\Controllers\GradeCalculatorController;
 */
 
 Route::get('/', [GradeCalculatorController::class, 'index']);
-
 Route::get('/process', [GradeCalculatorController::class, 'process']);
+
+
+
