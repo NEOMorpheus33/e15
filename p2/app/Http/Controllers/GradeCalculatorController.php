@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Http\Controllers;
 
@@ -12,7 +12,7 @@ class GradeCalculatorController extends Controller
 
     public function process(Request $request) {
         $passing = $request->passing;
-        $school = $request->school;
+        $school = $request->school; 
 
         return view('process', [
             'passing' => $passing,

@@ -12,8 +12,8 @@
   <label for="yescheck"> Yes </label><br>
   <input type="checkbox" name="passing" value="No">
   <label for="nocheck"> No </label><br>
-  <span style="color:green"><h2>I am?:</h2></span>
-
+  
+  <span style="color:green"><h1>I am</h1> </span> 
 
   <input type="radio" name="school" value="In pre-school">In pre-school  
   <input type="radio" name="school" value="In grade school">In grade school 
