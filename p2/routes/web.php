@@ -18,12 +18,3 @@ use App\Http\Controllers\GradeCalculatorController;
 Route::get('/', [GradeCalculatorController::class, 'index']);
 
 Route::get('/process', [GradeCalculatorController::class, 'process']);
-
-
-// Route::get('view/action_page3.php', function () {
-//     return view('action_page3');
-// });
-
-// Route::get('view/action_pageradio.php', function () {
-//     return view('action_pageradio');
-// });
