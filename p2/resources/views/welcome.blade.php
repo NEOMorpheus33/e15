@@ -4,7 +4,7 @@
 
 <h1> Do I think I'm passing? </h1>  
 
-<table> 
+    <table> 
   
  <form action="/process" method="GET"> 
 
@@ -17,7 +17,7 @@
 
 <table> 
   
-  <tr><th>I am </th></tr> 
+    <tr><th>I am </th></tr> 
 
   <tr><td><input type="radio" name="school" value="In pre-school">In pre-school  </td></tr>
   <tr><td><input type="radio" name="school" value="In grade school">In grade school </td></tr>
