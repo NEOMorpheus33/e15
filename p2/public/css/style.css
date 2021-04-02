@@ -28,3 +28,15 @@ html {
 }
 
 h1 { color:green; font-size:medium;}
+
+body {
+	text-align:center; 
+}
+
+table {
+	
+	width:50%;
+	margin:auto;
+	border:1px solid green; 
+
+}

@@ -14,8 +14,18 @@ use App\Http\Controllers\GradeCalculatorController;
 |
 */
 
-Route::get('/', [GradeCalculatorController::class, 'index']);
-Route::get('/process', [GradeCalculatorController::class, 'process']);
+Route::get('/', [GradeCalculatorController::class, 'index']); 
+Route::get('/process', [GradeCalculatorController::class, 'process']); 
+Route::get('css/style.css', [GradeCalculatorController::class, 'process']); 
+Route::get('css/style.css', [GradeCalculatorController::class, 'style.css']);  
+
+
+
+
+
+ 
+
+
 
 
 
