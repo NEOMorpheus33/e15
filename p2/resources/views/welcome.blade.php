@@ -1,30 +1,46 @@
-
 @extends('layouts/main') 
 
 @section('content')
 
+<h1> Do I think I'm passing? </h1>  
 
-<span style="color:green"><h1>Do I think I'm passing?</h1> </span> 
-
-<form action="/process" method="GET">
-
-  <input type="checkbox"  name="passing" value="Yes"> 
-  <label for="yescheck"> Yes </label><br>
-  <input type="checkbox" name="passing" value="No">
-  <label for="nocheck"> No </label><br>
+<table> 
   
-  <span style="color:green"><h1>I am</h1> </span> 
+ <form action="/process" method="GET"> 
 
-  <input type="radio" name="school" value="In pre-school">In pre-school  
-  <input type="radio" name="school" value="In grade school">In grade school 
-  <input type="radio" name="school" value="In high school">In high school  
-  <input type="radio" name="school" value="In an undergrad college">In an undergrad college 
-  <input type="radio" name="school" value="In an undergrad university">In an undergrad university 
-  <input type="radio" name="school" value="A graduate student in college">A graduate student in college
-  <input type="radio" name="school" value="A graduate student at a university">A graduate student at a university <br>   
+  <tr><td><input type="checkbox"  name="passing" value="Yes"> </td></tr> 
+  <tr><td><label for="yescheck"> Yes </label></td></tr> 
+  <tr><td><input type="checkbox" name="passing" value="No"> </td></tr> 
+  <tr><td><label for="nocheck">  No </label></td> </tr>  
 
-<input type="submit" value="Answer"> 
+    </table> 
+
+<table> 
+  
+  <tr><th>I am </th></tr> 
+
+  <tr><td><input type="radio" name="school" value="In pre-school">In pre-school  </td></tr>
+  <tr><td><input type="radio" name="school" value="In grade school">In grade school </td></tr>
+  <tr><td><input type="radio" name="school" value="In high school">In high school </td></tr>
+  <tr><td><input type="radio" name="school" value="In an undergrad college">In an undergrad college </td></tr>
+  <tr><td><input type="radio" name="school" value="In an undergrad university">In an undergrad university </td></tr>
+  <tr><td><input type="radio" name="school" value="A graduate student in college">A graduate student in college </td></tr>
+  <tr><td><input type="radio" name="school" value="A graduate student at a university">A graduate student at a university </td></tr> <br>   
+
+<tr><td> <input type="submit" value="Answer"> </td></tr> 
 
 </form>
 
-@endsection
+    </table>  
+
+@if(count($errors) > 0)
+    <ul class='Request'>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+@endif
+
+ 
+
+@endsection 
