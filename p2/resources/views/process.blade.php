@@ -1,6 +1,8 @@
-@extends('layouts/main')
+@extends('layouts/main') 
 @section('content')
 {{ $passing }}
 {{ $school }}
-@endsection
+@endsection 
+
+
 

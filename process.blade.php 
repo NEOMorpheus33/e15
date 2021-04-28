@@ -1,0 +1,9 @@
+@extends('layouts/main') 
+@section('content')
+{{ $JoeSearch }} 
+{{ $error }}
+{{ $create }}
+{{ $request }}
+
+@endsection 
+

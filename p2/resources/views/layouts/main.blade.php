@@ -13,6 +13,7 @@
 
 <body>
 <img src='/images/calc.jpg'><br>
+
 <class="h1">Joe's Harvard | HES Grade Calculator </h1>  
 
 @yield('content')
