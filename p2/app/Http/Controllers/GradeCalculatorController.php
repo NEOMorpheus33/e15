@@ -14,14 +14,11 @@ class GradeCalculatorController extends Controller
         $passing = $request->passing;
         $school = $request->school; 
         
-        $request->validate([
+        $request->validate( [
         'passing' => 'required',
-        'school' => 'required' 
-    ]);
+        'school' => 'required' ]); 
 
-    dump($request->all()); 
-
-    }   
+    } 
 
 } 
 

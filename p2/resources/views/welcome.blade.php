@@ -1,8 +1,8 @@
-@extends('layouts/main') 
+@extends('layouts/main')  
 
 @section('content')
 
-<h1> Do I think I'm passing? </h1>  
+<h1> Do I think I'm passing? </h1>   
 
     <table> 
   
@@ -33,14 +33,15 @@
 
     </table>  
 
+   
 @if(count($errors) > 0)
     <ul class='Request'>
         @foreach ($errors->all() as $error)
             <li>{{ $error }}</li>
         @endforeach
-    </ul>
-@endif
+    </ul> 
+
+  @endif 
 
  
-
-@endsection 
+@endsection  
