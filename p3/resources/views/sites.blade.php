@@ -2,7 +2,7 @@
 
 @section('title') 
 Your Site List  
-@endsection 
+
 
 @section('content')
 

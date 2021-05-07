@@ -1,7 +1,7 @@
 @extends('layouts/main')  
 
-@section('title') 
-    Add {{ $site->title }} to your list
+@section('Search') 
+    Add {{ $sites->title }} to your list
 @endsection
 
 @section('content') 
@@ -12,10 +12,10 @@
         <div class='details'>* Required fields</div>
         {{ csrf_field() }}
 
-        <label for='notes'>YOUR NOTES THE SITE</label> 
+        <label for='notes'>YOUR NOTES FOR THE SITE</label> 
         <textarea name='notes'>{{ old('notes') }}</textarea>
 
-        <button class='btn btn-primary'>Add</button> 
+        <button class='btn btn-primary'>Add Sites</button> 
     </form>  
 
     @endsection 

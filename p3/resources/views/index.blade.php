@@ -13,7 +13,7 @@
 
 ?>  
 
-<a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo Long Version 1.0'> </a> 
+<a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a> 
 
 <nav>  
     <ul>
@@ -21,11 +21,12 @@
 
         <li> 
             @if(!Auth::user()) 
-                <a href='/login'>Login</a> | <a href='/CRUD/create'>Add Site</a> 
+                <a href='/login'>Login</a> 
                  @else 
                 <form method='POST' id='logout' action='/logout'>
                     {{ csrf_field() }}
-                    <a href='#' onClick='document.getElementById("logout").submit();'>Logout</a>
+                    <a href='#' onClick='document.getElementById("logout").submit();'>Logout</a> 
+                    | <a href='/CRUD/create'>Add Site</a> 
                 </form> 
                  @endif
            
@@ -38,6 +39,14 @@
     Hello {{ Auth::user()->name }}!
 </h2>
 @endif
+
+@section('content')
+
+<h1><a href='/register'>register</a> </h1>
+
+
+
+
 
 <table> 
   
