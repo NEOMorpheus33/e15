@@ -1,6 +1,7 @@
-@extends('layouts/main')
+@extends('layouts/main') 
 
 @section('content')
+
 <h1>Register</h1>
 
 Already have a JSearch account? <a href='/login'>Login here...</a>

@@ -34,13 +34,13 @@ Route::get('/debug', function () {
     */
     #$debug['MySQL connection config'] = config('database.connections.mysql');
 
-    try {
-        $databases = DB::select('SHOW DATABASES;');
-        $debug['Database connection test'] = 'PASSED';
-        $debug['Databases'] = array_column($databases, 'Database');
-    } catch (Exception $e) {
-        $debug['Database connection test'] = 'FAILED: '.$e->getMessage();
-    }
+    //try {
+      //  $databases = DB::select('SHOW DATABASES;');
+        //$debug['Database connection test'] = 'PASSED';
+        //$debug['Databases'] = array_column($databases, 'Database');
+    //} catch (Exception $e) {
+      //  $debug['Database connection test'] = 'FAILED: '.$e->getMessage();
+   // }
 
-    dd($debug);
+   // dd($debug);
 });
