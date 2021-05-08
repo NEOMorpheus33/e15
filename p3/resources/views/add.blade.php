@@ -1,5 +1,4 @@
 @extends('layouts/main')  
-
 @section('Search') 
     Add {{ $sites->title }} to your list
 @endsection

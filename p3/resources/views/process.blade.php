@@ -2,8 +2,10 @@
 @section('content') 
 {{$request}}
 {{$JoeSearch}} 
-{{$Serps}} 
+{{$serps}} 
 {{$body}} 
-{{$Searchterms}} 
+{{processsite}}
+{{sites}}
+{{$searchTerms}} 
  @endsection 
 

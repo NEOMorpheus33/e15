@@ -10,20 +10,15 @@ Route::get('/process', [JoeSearchController::class, 'process']);
 Route::get('/create', [JoeSearchController::class, 'index']);
 Route::get('/url', [JoeSearchController::class, 'index']);
 Route::get('CRUD/create', [JoeSearchController::class, 'create']);
-Route::post('CRUD/process', [JoeSearchController::class, 'processsite']);
+Route::get('CRUD/create', [JoeSearchController::class, 'processs'])
+
 
  
-Route::get('/debug', function () {
+//Route::get('/debug', function () {
 
     # List Routes
 
-    Route::get('/list', [ListController::class,'sites']);
-    Route::post('/list/{url?}/save', [ListController::class, 'save']);
-    Route::get('/list', [ListController::class,'add']);
-
-    $debug = [
-        'Environment' => App::environment(),
-    ];
+   
 
     /*
     The following commented out line will print your MySQL credentials.
@@ -43,4 +38,4 @@ Route::get('/debug', function () {
    // }
 
    // dd($debug);
-});
+;
