@@ -8,6 +8,8 @@ use DOMDocument;
 use App\Models\Serps;
 use App\Models\create;
 use App\Models\Site;
+use Illuminate\Support\Arr;
+use Illuminate\Support\Collection;
 
 class JoeSearchController extends Controller
 {
@@ -18,38 +20,44 @@ class JoeSearchController extends Controller
         return view('index', ['serps' => $serps]);
     }
 
-   
-    // serps update not working yet
-    // serps::all($id); # Get all the serps
-
-    //serps::find($id); # Find a site by its id
-    //serps::delete($id); # Delete my site submitted
-
     public function create(Request $request)
     {
         return view('/CRUD/create');
     }
+    //public function index(Serps $request)
+    //{
+    //  return view('index', ['Serps' => $serps]);
+    //}
+
+    
+    // serps update not working yet
+    //$isAccessible = Arr::accessible(['a' => 1, 'b' => 2]);
+    //Serps::all($id); # Get all the serps
+    //serps::find($id); # Find a site by its id
+    //serps::delete($id); # Delete my site submitted
+
+    
 
     public function processsite(Request $request)
     {
     
     # Instantiate a new Site Model object
     
-        $site = new Site();
+        $sites = new Site();
 
         # Set the properties
         # Note how each property corresponds to a column in the table
     
-        $site->url = 'url';
-        $site->title = 'information';
-        $site->description = 'description';
-        $site->body = 'body';
-        $site->sitemapxml = 'sitemapxml';
+        $sites->url = 'url';
+        $sites->title = 'information';
+        $sites->description = 'description';
+        $sites->body = 'body';
+        $sites->sitemapxml = 'sitemapxml';
      
         # Invoke the Eloquent `save` method to generate a new row in the
         # `sites` table, with the above data
     
-        $site->save();
+        $sites->save();
 
         return redirect('CRUD/create')->with(['flash-alert' => 'Your site '.$site->title.' was added.']);
     }
