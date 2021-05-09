@@ -11,8 +11,6 @@ use App\Models\Site;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-$newSite->Site = $request->Site;
-
 class JoeSearchController extends Controller
 {
     public function index()
