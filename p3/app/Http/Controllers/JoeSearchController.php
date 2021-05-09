@@ -16,14 +16,12 @@ class JoeSearchController extends Controller
     public function index()
     {
         //$sites = Site::orderBy('url', 'ASC')->get();
-
         //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
-        
         // $newSites = $sites->sortByDesc('id')->take(3);
 
         $serps = session('serps');
 
-        return view('/', ['serps' => $serps]);
+        return view('index', ['serps' => $serps]);
     }
    
 
