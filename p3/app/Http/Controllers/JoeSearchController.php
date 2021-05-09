@@ -33,8 +33,12 @@ class JoeSearchController extends Controller
     //serps::delete($id); # Delete my site submitted
 
     
+    public function process(Request $request)
+    {
+        return view('/CRUD/create');
+    }
 
-    // public function processsite(Request $request)
+     
     
     public function store(Request $request)
         # Instantiate a new Site Model object
