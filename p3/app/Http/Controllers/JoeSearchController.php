@@ -11,13 +11,23 @@ use App\Models\Site;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
+$newBook->author_id = $request->author_id;
+
 class JoeSearchController extends Controller
 {
     public function index()
     {
-        $serps = session('serps', []);
-        return view('/', ['serps' => $serps]);
+        $sitess = Site::orderBy('title', 'ASC')->get();
+
+        //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
+        
+        $newSites = $sites->sortByDesc('id')->take(3);
+
+        $serps = session('serps');
+
+        return view('sites', ['sites' => $sites, 'newSooks' => $newSites]);
     }
+   
 
     public function create(Request $request)
     {
