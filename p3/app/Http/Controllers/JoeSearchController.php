@@ -16,7 +16,6 @@ class JoeSearchController extends Controller
     public function index()
     {
         $serps = session('serps', []);
-
         return view('index', ['serps' => $serps]);
     }
 
@@ -24,12 +23,9 @@ class JoeSearchController extends Controller
     {
         return view('/CRUD/create');
     }
-    //public function index(Serps $request)
-    //{
-    //  return view('index', ['Serps' => $serps]);
-    //}
-
     
+    //public function index(Serps $request)
+    //  return view('index', ['Serps' => $serps]);
     // serps update not working yet
     //$isAccessible = Arr::accessible(['a' => 1, 'b' => 2]);
     //Serps::all($id); # Get all the serps
@@ -38,16 +34,20 @@ class JoeSearchController extends Controller
 
     
 
-    public function processsite(Request $request)
+    // public function processsite(Request $request)
+    
+    public function store(Request $request)
+        # Instantiate a new Site Model object
     {
-    
-    # Instantiate a new Site Model object
-    
         $sites = new Site();
 
-        # Set the properties
-        # Note how each property corresponds to a column in the table
-    
+        $request->validate([
+        
+            'url'=>'required|max:25',
+            'title'=>'required|max:100',
+            'description'=>'required|max:200',
+            ]);
+
         $sites->url = 'url';
         $sites->title = 'information';
         $sites->description = 'description';
@@ -59,20 +59,22 @@ class JoeSearchController extends Controller
     
         $sites->save();
 
+        return redirect('/list'.$sites.'/edit')->with('sites => $sites');
+
+        
+        {
+        
+    }
+
+
+        # Set the properties
+        # Note how each property corresponds to a column in the table
+    
+        
+
         return redirect('CRUD/create')->with(['flash-alert' => 'Your site '.$site->title.' was added.']);
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-        
-        'url'=>'required|max:25',
-        'title'=>'required|max:100',
-        'description'=>'required|max:200',
-        ]);
-    }
-
-    
     //process Request
 
     public function process(Request $request)
@@ -165,5 +167,31 @@ class JoeSearchController extends Controller
             'description' => str_replace("\n", "", $description),
             'body' => str_replace("\n", "", $body)
         ];
+
+        /**
+     * PUT /books
+    */
+    
+        function update(Request $request, $sites)
+        {
+            $sites = Site::where('sites', '=', $slug)->first();
+
+            $request->validate([
+            'title' => 'required',
+            'url' => 'required|unique:books,url,'.$sites->id.'|max:1000',
+            'description' => 'required',
+            'body' => 'required|max:10000',
+            'sitemapxml' => 'sitemapxml',
+    ]);
+
+            $sites->title = $request->title;
+            $sites->url = $request->url;
+            $book->description = $request->description;
+            $book->body = $request->body;
+            $book->sitemapxml = $sitemapxml;
+            $book->save();
+
+            return redirect('/create'.$sites.'/edit')->with('sites => $sites');
+        }
     }
 }
