@@ -51,7 +51,8 @@
         <tr><td>{{$sites->url}} </td></tr>    
         <tr><td>{{$sites->title}} </td></td>  
         <tr><td>{{$sites->description}} </td></tr> 
-        <tr><td>{{$sites->body}} </td></tr>  
+        <tr><td>{{$sites->body}} </td></tr> 
+        <tr><td>{{$sites->save(sites)}} </td></tr>   
 
         @endif
         

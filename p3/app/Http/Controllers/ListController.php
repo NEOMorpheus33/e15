@@ -31,7 +31,7 @@ public function save(Request $request, $url)
   
     { 
     
-        dd(request)->all(); 
+        
    
     } 
 

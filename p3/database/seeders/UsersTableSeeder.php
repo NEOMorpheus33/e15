@@ -7,6 +7,8 @@ use Illuminate\Support\Str;
 use App\Models\Users; # Make our Users  Model accessible
 use Carbon\Carbon;  # We’ll use this library to generate timestamps
 use Faker\Factory;  # We’ll use this library to generate random/fake data
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UsersTableSeeder extends seeders
 {
@@ -18,10 +20,19 @@ class UsersTableSeeder extends seeders
      */
     public function run()
     {
-        # Three different examples of how to add Sites
-        //$this->addOneSite();
-        //$this->addAllSitessFromSitesDotJsonFile();
-        //$this->addRandomlyGeneratedSitesUsingFaker();
+        # Note the use of the `updateOrCreate` Eloquent method
+        # This is useful here because the email for each user has to be unique
+        $user = User::updateOrCreate(
+            ['email' => 'jill@harvard.edu', 'name' => 'Jill Harvard'],
+            ['password' => Hash::make('asdfasdf')
+        ]
+        );
+        
+        $user = User::updateOrCreate(
+            ['email' => 'jamal@harvard.edu', 'name' => 'Jamal Harvard'],
+            ['password' => Hash::make('asdfasdf')
+        ]
+        );
     }
 
     /**
@@ -72,7 +83,7 @@ class UsersTableSeeder extends seeders
     /**
      *
      */
-    private function addRandomlyGeneratedBooksUsingFaker()
+    private function addRandomlyGeneratedUsersUsingFaker()
     {
         # For this example, we'll generate random seed data using a package that
         # comes with Laravel called Faker: https://github.com/fzaninotto/Faker
@@ -81,7 +92,7 @@ class UsersTableSeeder extends seeders
         for ($i = 0; $i < 100; $i++) {
             $site = new Site();
 
-            $title = $faker->words(rand(3, 6), true);
+            $sites = $faker->words(rand(3, 6), true);
             $sites->title = Str::title($title);
             $sites->url = Str::slug($title, '-');
             $sites->user = $faker->firstName . ' ' . $faker->lastName;

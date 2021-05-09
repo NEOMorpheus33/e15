@@ -17,8 +17,8 @@ Your Site List
         <h2>{{ $site->title }}</h2> 
     </a> 
 
-    @if($site->author) 
-    <p>By {{ $site->author->first_name. ' ' . $site->author->last_name }}</p> 
+    @if($sites->url) 
+    <p>By {{ $site->url->url. ' ' . $sites->title }}</p> 
     @endif 
 
     {{-- In the following two paragraphs, observe how `$site->pivot` is used to access 
@@ -28,10 +28,10 @@ Your Site List
     </p>
 
     <p class='added'>
-        Added {{ $site->pivot->created_at->diffForHumans() }}
+        Added {{ $sites->pivot->created_at->diffForHumans() }}
     </p> 
 </div> 
-@endforeach  
+@endforeach   
 
 @endif
 
