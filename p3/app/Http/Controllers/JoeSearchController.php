@@ -11,12 +11,14 @@ use App\Models\Site;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
+$newSite->Site = $request->Site;
+
 class JoeSearchController extends Controller
 {
     public function index()
     {
         $serps = session('serps', []);
-        return view('index', ['serps' => $serps]);
+        return view('/', ['serps' => $serps]);
     }
 
     public function create(Request $request)
@@ -32,13 +34,6 @@ class JoeSearchController extends Controller
     //serps::find($id); # Find a site by its id
     //serps::delete($id); # Delete my site submitted
 
-    
-    public function process(Request $request)
-    {
-        return view('/CRUD/create');
-    }
-
-     
     
     public function store(Request $request)
         # Instantiate a new Site Model object
@@ -63,7 +58,10 @@ class JoeSearchController extends Controller
     
         $sites->save();
 
-        return redirect('/list'.$sites.'/edit')->with('sites => $sites');
+        return redirect('/books/create')
+        ->with(['/' => 'The Sites “'.$sites->title,$sites->url, $sites->description,
+        $sites->body, $sites->sitemapxml,
+        '” was added.']);
 
         
         {
@@ -80,6 +78,9 @@ class JoeSearchController extends Controller
     }
 
     //process Request
+
+    //public function process(Request $request
+    //{
 
     public function process(Request $request)
     {
