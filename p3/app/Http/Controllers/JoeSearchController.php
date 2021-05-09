@@ -11,7 +11,7 @@ use App\Models\Site;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-$newBook->author_id = $request->author_id;
+$newSites->sites= $request->sites;
 
 class JoeSearchController extends Controller
 {
