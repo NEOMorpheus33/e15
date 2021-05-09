@@ -11,8 +11,6 @@ use App\Models\Site;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
-$newSites->sites= $request->sites;
-
 class JoeSearchController extends Controller
 {
     public function index()
@@ -24,6 +22,8 @@ class JoeSearchController extends Controller
         $newSites = $sites->sortByDesc('id')->take(3);
 
         $serps = session('serps');
+
+        $newSites->sites= $request->sites;
 
         return view('sites', ['sites' => $sites, 'newSooks' => $newSites]);
     }
