@@ -1,4 +1,4 @@
-@extends('layouts/main')             
+@extends('layouts/main')               
 @section('Search')   
 
 <?php
@@ -45,14 +45,11 @@
 <h1><a href='/register'>register</a> </h1>
 
 
-
-
-
 <table> 
   
  <form action="/process" method="GET">     
 
-  <tr><td><input type="text" name="JoeSearch" value=" "> </td></tr>   
+  <tr><td><input type="text" name="JoeSearch" value=" "> </td></tr>    
   <tr><td><label for="text">Type Keywords Search</label></td></tr>  
   
   <tr><td><input type="checkbox" name="PublicSearch" value=" "> </td></tr>  
@@ -87,10 +84,6 @@
         @endforeach
     </ul> 
 @endif 
-
-
-
-
 
 @endsection      
 
