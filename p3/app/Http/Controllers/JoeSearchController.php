@@ -62,7 +62,7 @@ class JoeSearchController extends Controller
     
         $sites->save();
 
-        return redirect('/books/create')
+        return redirect('/CRUD/create')
         ->with(['/' => 'The Sites “'.$sites->title,$sites->url, $sites->description,
         $sites->body, $sites->sitemapxml,
         '” was added.']);
