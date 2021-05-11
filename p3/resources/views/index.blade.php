@@ -116,19 +116,11 @@
         <input type="submit" name="submit" value="Submit">
     </form>
 
-</body>
-</html>
-
-
-<?php 
-        echo "<h2>Your Input:</h2>";
+    <?php 
+       
         echo $url;
         echo $title;
-        echo "<br>";
         echo $description;
-        echo "<br>";
         echo $body;
-        echo "<br>";
         
-
         
