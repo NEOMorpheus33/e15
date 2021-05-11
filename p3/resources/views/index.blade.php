@@ -74,12 +74,13 @@
     </table>
 
 
-    <?php 
-    
+
+
     <h2>Search Engine Results</h2>
 
-
-    // Declaring variables
+    <?php
+    
+    // Declaring the variables just below here 
 
     $serps = "";
 
