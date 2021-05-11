@@ -5,7 +5,7 @@ use Illuminate\Http\Request;
 
 class Serps extends Controller
 {
-    public function Serps($serps)
+    public function serps($serps)
     {
         $serps = new Serp;
     
