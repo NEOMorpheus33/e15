@@ -26,10 +26,7 @@ class JoeSearchController extends Controller
         return view('index', ['serps' => $serps]);
     }
 
-    public function serps($serps)
-    {
-        return view('index'->with($serps));
-    }
+   
         
     //  'serps',  // <-- This will be available in the view as $project
     //  $serps  // <-- This will be contained in the $project variable in the view
