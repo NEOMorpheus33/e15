@@ -1,4 +1,4 @@
-@extends('layouts/main')                
+@extends('layouts/main')                   
 @section('Search')   
 
 <?php
@@ -15,7 +15,7 @@
 
 <a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a> 
 
-<nav>  
+<nav>   
     <ul>
         <!-- nav links  --> 
 
@@ -52,7 +52,7 @@
   <tr><td><input type="text" name="JoeSearch" value=" "> </td></tr>    
   <tr><td><label for="text">Type Keywords Search</label></td></tr>  
   
-   <tr><td><input type="checkbox" name="PrivateSearch" value=" "> </td></tr> 
+  <tr><td><input type="checkbox" name="PrivateSearch" value=" "> </td></tr> 
   <tr><td><label for="PublicSearch">  Private Search </label></td> </tr>         
 
 </table>  
@@ -71,7 +71,7 @@
         <tr><td>{{$serps->description}} </td></tr> 
         <tr><td>{{$serps->body}} </td></tr>  
         
-</table> 
+</table>  
 </div> 
 @endif
 @if(count($errors) > 0)
@@ -81,7 +81,6 @@
         @endforeach
     </ul> 
 @endif 
-
 @endsection      
 
 
