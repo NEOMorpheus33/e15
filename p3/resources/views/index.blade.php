@@ -105,7 +105,6 @@
 
 ?>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        Name: <input type="text" name="url">
         <br><br>
         title: <input type="text" name="title">
         <br><br>
@@ -122,13 +121,13 @@
 
     <?php
         echo "<h2>Your Input:</h2>";
-        echo $url;
+        echo ("$url";
+        echo <br>;
+        echo "$title";
         echo "<br>";
-        echo $title;
+        echo "$description";
         echo "<br>";
-        echo $description;
-        echo "<br>";
-        echo $body;
+        echo "$body";
         echo "<br>";
         
 
