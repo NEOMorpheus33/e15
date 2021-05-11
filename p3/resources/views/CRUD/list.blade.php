@@ -15,9 +15,9 @@ Your List
 <div style="overflow-x"> 
 
 <table>     
-        <tr><td>{{$itess->url}} </td></tr>    
-        <tr><td>{{$sitess->title}} </td></td>  
-        <tr><td>{{$sitess->description}} </td></tr> 
+        <tr><td>{{$ites->url}} </td></tr>    
+        <tr><td>{{$sites->title}} </td></td>  
+        <tr><td>{{$sites->description}} </td></tr> 
         <tr><td>{{$sites->body}} </td></tr>  
 </table> 
 </div> 

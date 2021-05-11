@@ -17,7 +17,7 @@
   
 
     <td><label for='url'>* Site URL</label>  
-    <input type='url' name='url' id='url' value='{{ old("url") }}'>
+    <input type='text' name='url' id='url' value='{{ old("url") }}'>
     @include('includes/error-field', ['fieldName' => 'url'])</td></tr> 
     
     
