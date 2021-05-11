@@ -104,26 +104,21 @@
     }
 
 ?>
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        Name: <input type="text" name="url">
+        <br><br>
+        title: <input type="text" name="title">
+        <br><br>
+        descripton: <input type="text" name="description">
+        <br><br>
+        body: <textarea name="body" rows="5" cols="40"></textarea>
+        <br><br>
 
-    <html>
+        <input type="submit" name="submit" value="Submit">
+    </form>
 
-    <body>
 
-        <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-            Name: <input type="text" name="url">
-            <br><br>
-            title: <input type="text" name="title">
-            <br><br>
-            descripton: <input type="text" name="description">
-            <br><br>
-            body: <textarea name="body" rows="5" cols="40"></textarea>
-            <br><br>
 
-            <input type="submit" name="submit" value="Submit">
-        </form>
-
-    </body>
-    </html>
 
     <?php
         echo "<h2>Your Input:</h2>";
@@ -135,6 +130,8 @@
         echo "<br>";
         echo $body;
         echo "<br>";
-        echo $ITPro;
+        
 
         ?>
+</body>
+</html>
