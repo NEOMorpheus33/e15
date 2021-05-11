@@ -103,24 +103,20 @@
     return $data;
     }
 
-?>
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        <br><br>
-        title: <input type="text" name="title">
-        <br><br>
-        descripton: <input type="text" name="description">
-        <br><br>
-        body: <textarea name="body" rows="5" cols="40"></textarea>
-        <br><br>
 
-        <input type="submit" name="submit" value="Submit">
+    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <br><br>
+    title: <input type="text" name="title">
+    <br><br>
+    descripton: <input type="text" name="description">
+    <br><br>
+    body: <textarea name="body" rows="5" cols="40"></textarea>
+    <br><br>
+
+    <input type="submit" name="submit" value="Submit">
     </form>
 
-    <?php 
-       
-        echo $url;
-        echo $title;
-        echo $description;
-        echo $body;
-        
-        
+    echo $url;
+    echo $title;
+    echo $description;
+    echo $body;
