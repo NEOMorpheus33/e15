@@ -116,10 +116,11 @@
         <input type="submit" name="submit" value="Submit">
     </form>
 
+</body>
+</html>
 
 
-
-    <?php 
+<?php 
         echo "<h2>Your Input:</h2>";
         echo $url;
         echo $title;
@@ -130,6 +131,4 @@
         echo "<br>";
         
 
-        ?>
-</body>
-</html>
+        
