@@ -83,10 +83,10 @@
     // Declaring the variables just below here  
 
     $serps = ""; 
-    $ITPro =""; 
+    
 
     // define variables and set to empty values
-    $title = $url = $body = $description $ITPro = "";
+    $title = $url = $body = $description  = "";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $url = test_input($_POST["url"]);
@@ -115,11 +115,7 @@
     <br><br>
     body: <textarea name="body" rows="5" cols="40"></textarea>
     <br><br>
-    ITPro:
-    <input type="radio" name="ITPro" value="female">IT Professional
-    <input type="radio" name="NonITPro" value="male">Non IT Professional
-    <input type="radio" name="other" value="other">Other
-    <br><br>
+
     <input type="submit" name="submit" value="Submit">
     </form>
 
