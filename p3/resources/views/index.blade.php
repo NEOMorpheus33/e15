@@ -104,19 +104,19 @@
     }
 
 
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    <br><br>
+    <form method="post" action= echo htmlspecialchars($_SERVER["PHP_SELF"]);>
+    <br>
     title: <input type="text" name="title">
-    <br><br>
+    <br>
     descripton: <input type="text" name="description">
-    <br><br>
+    <br>
     body: <textarea name="body" rows="5" cols="40"></textarea>
-    <br><br>
+    <br>
 
     <input type="submit" name="submit" value="Submit">
     </form>
 
-    echo $url;
-    echo $title;
-    echo $description;
-    echo $body;
+    echo $url; 
+    echo $title; 
+    echo $description; 
+    echo $body;  
