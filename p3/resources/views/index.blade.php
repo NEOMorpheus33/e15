@@ -80,9 +80,10 @@
 
     <?php
     
-    // Declaring the variables just below here 
+    // Declaring the variables just below here  
 
-    $serps = "";
+    $serps = ""; 
+    $ITPro =""; 
 
     // define variables and set to empty values
     $title = $url = $body = $description $ITPro = "";
