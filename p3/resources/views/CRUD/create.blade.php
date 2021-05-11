@@ -1,5 +1,5 @@
 @extends('layouts/main')       
-
+@section ('Search') 
 
 <link href='style.css' rel='stylesheet'> 
 <h1>Add a Site Below for Faster Indexing Similar to Google Console</h1> 
