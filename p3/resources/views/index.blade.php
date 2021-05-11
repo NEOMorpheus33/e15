@@ -20,7 +20,7 @@
 ?>
 
     <a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a>
-    <?php 
+
     <nav>
         <ul>
             <!-- nav links  -->
@@ -74,10 +74,11 @@
     </table>
 
 
-
+    <?php 
+    
     <h2>Search Engine Results</h2>
 
-    
+
     // Declaring variables
 
     $serps = "";
