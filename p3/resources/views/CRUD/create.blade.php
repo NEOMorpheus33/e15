@@ -1,12 +1,12 @@
-@extends('layouts/main')    
-@section('addsite')
+@extends('layouts/main')       
+
 
 <link href='style.css' rel='stylesheet'> 
 <h1>Add a Site Below for Faster Indexing Similar to Google Console</h1> 
 <table style="width:100%">
   <tr><td><h1>Add a Site</h1> </td></tr> 
     
-    <form method='POST' action='/CRUD/process'> 
+    <form method='POST' action='/CRUD/list'> 
     <div class='details'>* Required fields</div>
     {{ csrf_field() }} </th> 
   </tr>
@@ -40,39 +40,8 @@
     
    </table> 
 
-    
+  @endsection 
 
-<div style="overflow-x"> 
-
-<table>  
-
-@if($processsite) 
-        
-        <tr><td>{{$sites->url}} </td></tr>    
-        <tr><td>{{$sites->title}} </td></td>  
-        <tr><td>{{$sites->description}} </td></tr> 
-        <tr><td>{{$sites->body}} </td></tr> 
-        <tr><td>{{$sites->save(sites)}} </td></tr>   
-
-        @endif
-        
-</table> 
-</div> 
-
-@if(count($errors) > 0)
-    <ul class='process'>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul> 
-@endif 
-
-
-@if(count($errors) > 0) 
-    <div class='alert alert-danger'> 
-        Please correct the above errors.
-    </div>
-    @endif
 
 
 

@@ -11,9 +11,9 @@
 @section('content') 
 
 @if(!$sites)  
-Site not found. <a href='/books'>Add more sites...</a> 
+Site not found. <a href='/sites'>Add more sites...</a> 
 @else 
-<img class='cover' src='{{ $sites->cover_url }}' alt='Cover photo for {{ $sites->title }}'> 
+<img class='cover' src='{{ $sites->rl }}' alt='Cover photo for {{ $sites->title }}'> 
 
 <h1>{{ $sites->title }}</h1> 
 
@@ -22,7 +22,7 @@ Site not found. <a href='/books'>Add more sites...</a>
 <a href='{{ $sites->url }}'>Sites Show...</a>   
 
 <p class='description'> 
-    {{ $book->description }}
+    {{ $sites->description }} 
     <a href='{{ $sites->description }}'>Learn more...</a>
 </p> 
 
@@ -34,6 +34,6 @@ Site not found. <a href='/books'>Add more sites...</a>
 <p>By {{ $sites->Site }}</p>     
 
 @if($sites->title)    
-    <p>By {{ $book->tite ' ' . $site->url }}</p>
+    <p>By {{ $sites->tite ' ' . $sites->url }}</p>
 @endif 
 @endsection  
