@@ -2,7 +2,6 @@
 @section('content')  
 {{$request}} 
 {{$JoeSearch}}   
-{{$serps}}  
 {{$body}}  
 {{$processite}}  
 {{$sites}} 
