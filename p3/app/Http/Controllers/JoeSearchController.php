@@ -38,7 +38,7 @@ class JoeSearchController extends Controller
 
     public function processite()
     {
-        //$sites = Site::orderBy('url', 'ASC')->get();
+        //$sites = Site::orderBy('url', 'ASC'v)->get();
         //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
         // $newSites = $sites->sortByDesc('id')->take(3);
 
