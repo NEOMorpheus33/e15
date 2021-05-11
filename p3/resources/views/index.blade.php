@@ -119,10 +119,9 @@
 
 
 
-    <?php
+    <?php 
         echo "<h2>Your Input:</h2>";
         echo $url;
-        echo <br>;
         echo $title;
         echo "<br>";
         echo $description;
