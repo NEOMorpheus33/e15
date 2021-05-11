@@ -113,7 +113,7 @@ class JoeSearchController extends Controller
 
         //create an empty instance of our model right below
 
-        $serps = new Serps();
+        $serps = new serps();
         $body = $details['body'];
         $searchTerms = $request->JoeSearch;
 
