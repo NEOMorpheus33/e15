@@ -121,13 +121,13 @@
 
     <?php
         echo "<h2>Your Input:</h2>";
-        echo ("$url";
+        echo $url;
         echo <br>;
-        echo "$title";
+        echo $title;
         echo "<br>";
-        echo "$description";
+        echo $description;
         echo "<br>";
-        echo "$body";
+        echo $body;
         echo "<br>";
         
 
