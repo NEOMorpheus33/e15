@@ -1,5 +1,5 @@
-@extends('layouts/main')                    
-@section('Search')   
+@extends('layouts/main')                     
+@section('Search')     
 
 <?php
 
@@ -59,37 +59,14 @@
 
 <h2>Search Engine Results</h2> 
 
-
-@if($serps)  
-
-<div style="overflow-x"> 
-
-<table>    
-        
-        <tr><td>{{$serps->url}} </td></tr>    
-        <tr><td>{{$serps->title}} </td></td>  
-        <tr><td>{{$serps->description}} </td></tr> 
-        <tr><td>{{$serps->body}} </td></tr>  
-        
-</table>  
-</div> 
-@endif
-@if(count($errors) > 0)
-    <ul class='process'>
-        @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-        @endforeach
-    </ul> 
-@endif 
-@endsection      
-
-
-
-
-
- 
-
-
-
-
-
+<?php 
+// Declaring variables
+$serps = "";
+{
+{$serps->url
+{$serps->title}
+{$serps->description}
+{$serps->body}
+}
+}
+?>

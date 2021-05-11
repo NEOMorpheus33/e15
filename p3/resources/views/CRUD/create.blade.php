@@ -1,46 +1,74 @@
-@extends('layouts/main')       
+@extends('layouts/main')        
 @section ('Search') 
 
 <link href='style.css' rel='stylesheet'> 
 <h1>Add a Site Below for Faster Indexing Similar to Google Console</h1> 
-<table style="width:100%">
-  <tr><td><h1>Add a Site</h1> </td></tr> 
-    
-    <form method='POST' action='/CRUD/list'> 
-    <div class='details'>* Required fields</div>
-    {{ csrf_field() }} </th> 
-  </tr>
-  <tr>
-    <td><label for='title'>* Title</label>
-    <input type='text' name='title' id='title' value='{{ old("title") }}'> 
-    @include('includes/error-field', ['fieldName' => 'title'])</td>  </tr>
+
+
+
+<!DOCTYPE HTML>  
+<html> 
+<head> 
+</head> 
+<body>  
+
+<?php
+
+// define variables and set to empty values for sites info list
+
+$name = $email = $url = $title = $description= $body="";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $body = test_input($_POST["body"]);
+    $url = test_input($_POST["url"]);
+    $title = test_input($_POST["title"]);
+    $description = test_input($_POST["description"]);
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
+?>
+
+<h2>List Your Site</h2> 
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">   
+  URL: <input type="text" name="url">
+  <br><br>
+  description: <input type="text" name="description"> 
+  <br><br>
+  title: <input type="text" name="title">
+  <br><br>
   
+  <br><br> 
+  body text: <textarea name="comment" rows="5" cols="40"></textarea>
+  <br><br>
+  Gender:
+  <input type="radio" name="gender" value="female">Female
+  <input type="radio" name="gender" value="male">Male
+  <input type="radio" name="gender" value="other">Other
+  <br><br>
+  <input type="submit" name="submit" value="Submit">  
+</form>
 
-    <td><label for='url'>* Site URL</label>  
-    <input type='text' name='url' id='url' value='{{ old("url") }}'>
-    @include('includes/error-field', ['fieldName' => 'url'])</td></tr> 
-    
-    
-    <tr><td><label for='description'>* descripton</label> 
-    <input type='text' name='description' id='description' value='{{ old("description") }}'>
-    @include('includes/error-field', ['fieldName' => 'description'])</td> </tr> 
-    
-    <tr></td><label for='body'>* Body </label>
-    <input type='text' name='body' id='body' value='{{ old("body") }}'>
-    @include('includes/error-field', ['fieldName' => 'body'])  </td></tr>
- 
- 
-  <tr><td> <label for='sitemapxml'>* sitemapxml </label>
-    <input type='text' name='sitemapxml' id='sitemapxml' value='{{ old("sitemapxml") }}'>
-    @include('includes/error-field', ['fieldName' => 'sitemapxml']) <td></tr>
-    
-    <tr><td><button type='submit' class='btn btn-primary'>Add My Site</button></td> </tr> 
+<?php
+echo "<h2>Your Input:</h2>";
+echo $name;
+echo "<br>";
+echo $email;
+echo "<br>";
+echo $website;
+echo "<br>";
+echo $comment;
+echo "<br>";
+echo $gender;
+?>
 
-    </form>  
-    
-   </table> 
-
-  @endsection 
+</body>
+</html>
 
 
 
