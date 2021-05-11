@@ -20,7 +20,7 @@
 ?>
 
     <a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a>
-
+    <?php 
     <nav>
         <ul>
             <!-- nav links  -->
@@ -69,66 +69,69 @@
                 <td><label for="PublicSearch"> Private Search </label></td>
             </tr>
 
+
+
     </table>
+
+
 
     <h2>Search Engine Results</h2>
 
-    <?php 
-// Declaring variables
-$serps = "";
+    
+    // Declaring variables
+
+    $serps = "";
+
+    // define variables and set to empty values
+    $title = $url = $body = $description $ITPro = "";
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $url = test_input($_POST["url"]);
+    $title = test_input($_POST["title"]);
+    $body = test_input($_POST["body"]);
+    $description = test_input($_POST["description"]);
 
 
-<?php
-// define variables and set to empty values
-$title = $url = $body = $description $ITPro = ""; 
+    function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    $data = save($serps);
+    return $data;
+    }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  $url = test_input($_POST["url"]);
-  $title = test_input($_POST["title"]);
-  $body = test_input($_POST["body"]);
-  $description = test_input($_POST["description"]);
-  
 
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  $data = save($serps);
-  return $data; 
-}
-
-?>
 
     <h2>PHP Form Validation Example</h2>
     <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-        Name: <input type="text" name="url">
-        <br><br>
-        title: <input type="text" name="title">
-        <br><br>
-        descripton: <input type="text" name="description">
-        <br><br>
-        body: <textarea name="body" rows="5" cols="40"></textarea>
-        <br><br>
-        ITPro:
-        <input type="radio" name="ITPro" value="female">IT Professional
-        <input type="radio" name="NonITPro" value="male">Non IT Professional
-        <input type="radio" name="other" value="other">Other
-        <br><br>
-        <input type="submit" name="submit" value="Submit">
+    Name: <input type="text" name="url">
+    <br><br>
+    title: <input type="text" name="title">
+    <br><br>
+    descripton: <input type="text" name="description">
+    <br><br>
+    body: <textarea name="body" rows="5" cols="40"></textarea>
+    <br><br>
+    ITPro:
+    <input type="radio" name="ITPro" value="female">IT Professional
+    <input type="radio" name="NonITPro" value="male">Non IT Professional
+    <input type="radio" name="other" value="other">Other
+    <br><br>
+    <input type="submit" name="submit" value="Submit">
     </form>
 
-    <?php
-echo "<h2>Your Input:</h2>";
-echo $url;
-echo "<br>";
-echo $title;
-echo "<br>";
-echo $description;
-echo "<br>";
-echo $body; 
-echo "<br>";
-echo $ITPro; 
-?>
+
+    echo "<h2>Your Input:</h2>";
+    echo $url;
+    echo "<br>";
+    echo $title;
+    echo "<br>";
+    echo $description;
+    echo "<br>";
+    echo $body;
+    echo "<br>";
+    echo $ITPro;
+
 
 </body>
 </html>
