@@ -14,7 +14,7 @@ Route::get('/url', [JoeSearchController::class, 'index']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'create']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'process']);
 Route::get('/add', [JoeSearchController::class, 'index']);
-Route::get('/list', [JoeSearchController::class, 'create']);
+Route::get('CRUD/list', [JoeSearchController::class, 'create']);
 Route::get('/sites', [JoeSearchController::class, 'process']);
 Route::get('/delete', [JoeSearchController::class, 'index']);
 Route::get('/already_crawled', [JoeSearchController::class, 'process']);
