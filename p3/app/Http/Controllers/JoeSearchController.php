@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 use DOMDocument;
-use App\Models\Serp; 
+use App\Models\Serp;
 use App\serps;
 use App\Models\create;
 use App\Models\Site;
@@ -24,20 +24,18 @@ class JoeSearchController extends Controller
         $serps = session('serps');
 
         return view('index', ['serps' => $serps]);
-    } 
+    }
 
-    Public function serps($serps)
+    public function serps($serps)
     {
+        return view('index'->with($serps))
     
-        return view('index')->with($serps);
-
-    } 
+    }
         
-        
-      //  'serps',  // <-- This will be available in the view as $project
-      //  $serps  // <-- This will be contained in the $project variable in the view
+    //  'serps',  // <-- This will be available in the view as $project
+    //  $serps  // <-- This will be contained in the $project variable in the view
     
-    ;
+    
 
     public function processite()
     {
