@@ -1,4 +1,4 @@
-@extends('layouts/main')               
+@extends('layouts/main')                
 @section('Search')   
 
 <?php
@@ -11,7 +11,7 @@
 /* https://www.extension.harvard.edu.*/
 /*JSearch Logo*/
 
-?>  
+?> 
 
 <a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a> 
 
@@ -30,7 +30,7 @@
                 </form> 
                  @endif
            
-        </li>
+        </li> 
     </ul>
 </nav>  
 
@@ -52,10 +52,7 @@
   <tr><td><input type="text" name="JoeSearch" value=" "> </td></tr>    
   <tr><td><label for="text">Type Keywords Search</label></td></tr>  
   
-  <tr><td><input type="checkbox" name="PublicSearch" value=" "> </td></tr>  
-  <tr><td><label for="PublicSearch">  Public Search </label></td> </tr>  
-
-  <tr><td><input type="checkbox" name="PrivateSearch" value=" "> </td></tr> 
+   <tr><td><input type="checkbox" name="PrivateSearch" value=" "> </td></tr> 
   <tr><td><label for="PublicSearch">  Private Search </label></td> </tr>         
 
 </table>  

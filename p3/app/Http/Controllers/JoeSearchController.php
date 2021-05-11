@@ -23,6 +23,17 @@ class JoeSearchController extends Controller
 
         return view('index', ['serps' => $serps]);
     }
+
+    public function processite()
+    {
+        //$sites = Site::orderBy('url', 'ASC')->get();
+        //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
+        // $newSites = $sites->sortByDesc('id')->take(3);
+
+        $serps = session('sites');
+
+        return view('index', ['sitess' => $sites]);
+    }
    
 
     public function create(Request $request)
@@ -78,7 +89,7 @@ class JoeSearchController extends Controller
     
         
 
-        return redirect('CRUD/create')->with(['flash-alert' => 'Your site '.$site->title.' was added.']);
+        return redirect('CRUD/create')->with(['flash-alert' => 'Your site '.$sites->title.' was added.']);
     }
 
     //process Request

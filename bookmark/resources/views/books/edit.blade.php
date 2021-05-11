@@ -1,10 +1,6 @@
-{{-- /resources/views/books/create.blade.php --}}
-@extends('layouts/main')
-
-@section('title')
-Edit book {{ $book->title }}
-@endsection
-
+{{-- /resources/views/books/create.blade.php --}}    
+@extends('layouts/main')  
+Edit book {{ $book->title }} 
 @section('content')
 
 <h1>Edit</h1>

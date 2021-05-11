@@ -1,14 +1,14 @@
-@extends('main') 
-@section('crawled') 
+@extends('layouts/main')  
+@section('crawled')  
  
-<?php           
+<?php             
 
 /* Author: copyright Joseph Paul Fanning Grad student*/ 
 /* Author: & Susan Buck Professor */
 /*Harvard University*/ 
 
 // This is our starting point. Change this to whatever URL you want.
-$start = "https://www.harvard.edu"; 
+$start = "https://www.harvard.edu";  
 
 // Our 2 global arrays containing our links to be crawled.
 $already_crawled = array(); 

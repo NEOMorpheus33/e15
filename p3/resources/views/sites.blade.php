@@ -1,12 +1,12 @@
-@extends('layouts/main')  
+@extends('layouts/main')   
 
 @section('title') 
 Your Site List  
 
 
-@section('content')
+@section('content') 
 
-@if($sites->count() == 0)
+@if($sites->count() == 0) 
 <p>You have not added any sites to your list yet.</p>
 <p><a href='/sites'>Find sites to add in our Search Engine...</a></p> 
 @else 

@@ -1,4 +1,3 @@
-{{-- /resources/views/CRUD/create.blade.php --}}
 @extends('layouts/main')
 
 @section('url') 
