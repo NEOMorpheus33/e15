@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 use DOMDocument;
 use App\Models\Serp;
-use App\serps;
 use App\Models\create;
 use App\Models\Site;
 
@@ -60,7 +59,7 @@ class JoeSearchController extends Controller
 
     
     public function store(Request $request)
-        # Instantiate a new Site Model object
+# Instantiate a new Site Model object
     {
         $sites = new Site();
 
@@ -113,7 +112,7 @@ class JoeSearchController extends Controller
 
         //create an empty instance of our model right below
 
-        $serps = new serps();
+        //$serps = new Serp();
         $body = $details['body'];
         $searchTerms = $request->JoeSearch;
 

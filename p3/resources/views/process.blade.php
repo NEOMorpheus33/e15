@@ -1,11 +1,13 @@
 @extends('layouts/main')    
 @section('content')  
 {{$request}} 
-{{$JoeSearch}}   
+{{$JoeSearch}}    
 {{$body}}  
 {{$processite}}  
 {{$sites}} 
 {{$PrivateSearch}} 
-{{$list}}  
+{{$list}}   
+{{$serps}}
+{{searchTerms}}  
  @endsection 
 
