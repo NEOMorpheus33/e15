@@ -30,9 +30,9 @@ class JoeSearchController extends Controller
         //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
         // $newSites = $sites->sortByDesc('id')->take(3);
 
-        $serps = session('sites');
+        $sites = session('sites');
 
-        return view('index', ['sitess' => $sites]);
+        return view('index', ['sites' => $sites]);
     }
    
 
