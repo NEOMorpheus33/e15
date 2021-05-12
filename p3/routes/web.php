@@ -4,7 +4,11 @@ use App\Http\Controllers\JoeSearchController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\View\FileViewFinder;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\PracticeController;
+
+Route::get('/post/create', [PostController::class, 'create']);
+Route::post('/post', [PostController::class, 'store']);
 
 Route::any('/practice/{n?}', [PracticeController::class, 'index']);
 Route::get('/', [JoeSearchController::class, 'index']);
@@ -23,6 +27,11 @@ Route::get('/show', [JoeSearchController::class, 'process']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'index']);
 Route::get('/JoeBotArrays', [JoeSearchController::class, 'index']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'processite']);
+
+// JSearch Developer Blog PostController Code
+
+Route::get('/post/create', [PostController::class, 'create']);
+Route::post('/post', [PostController::class, 'store']);
 
 Route::get('/debug', function () {
     $debug = [

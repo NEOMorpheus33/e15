@@ -1,34 +1,34 @@
 @extends('layouts/main')
 
 @section('title')
-All Books
+All Sites
 @endsection
 
 @section('head')
-<link href='/css/books/index.css' rel='stylesheet'>
+<link href='style.css' rel='stylesheet'>
 @endsection
 
 @section('content')
 
-<h1>All Books</h1>
+<h1>All Sites</h1>
 
-@if(count($books) == 0)
-No books have been added yet...
+@if(count($sites) == 0)
+No sites have been added yet.
 @else
-<div id='newBooks'>
-    <h2>New Books</h2>
+<div id='newSites'>
+    <h2>New Sites</h2>
     <ul class='clean-list'>
-        @foreach($newBooks as $book)
-        <li><a href='/books/{{ $book->slug }}'>{{ $book->title }}</a></li>
+        @foreach($newSitess as $sites)
+        <li><a href='/sites/{{ $sites->slug }}'>{{ $sites->title }}</a></li>
         @endforeach
     </ul>
 </div>
 
-<div id='books'>
+<div id='sites'>
     @foreach($books as $book)
-    <a class='book' href='/books/{{ $book->slug }}'>
-        <h3>{{ $book->title }}</h3>
-        <img class='cover' src='{{ $book->cover_url }}'>
+    <a class='sites' href='/sites/{{ $book->url }}'>
+        <h3>{{ $sites->title }}</h3>
+        <img class='sites' src='{{ $sites->cover_url }}'>
     </a>
     @endforeach
 </div>

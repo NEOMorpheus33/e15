@@ -19,13 +19,13 @@ class ListController extends JoeSearchController {
 
 # post /site/{$url/save} 
 
-Route::get('/list', [ListController::class,'Serps']);
-Route::post('/list/{url?}/save', [ListController::class, 'save']);
-Route::get('/list', [ListController::class,'add']);
+//Route::get list($url $title $body $description [ListController::class,'Serps']);  
+//Route::post('/list/{url?}/save', [ListController::class, 'save']); 
+//Route::get('/list', [ListController::class,'add']); 
 
-$debug = [
-    'Environment' => App::environment(),
-];
+//$debug = [
+    //'Environment' => App::environment(),
+//;
 
 public function save(Request $request, $url)
   

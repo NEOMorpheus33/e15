@@ -1,17 +1,19 @@
-<?php
-namespace App\Http\Controllers; 
-namespace app\Actions\Sites; 
-use Illuminate\Http\Request; 
-use\app\models\Sites;  
-use app\CustomClass\stdClass; 
-use stdClass; 
+<?php        
 
+namespace app\Actions\Sites;     
+ 
+ use\app\models\Sites;  
+ use app\CustomClass\stdClass; 
+ use stdClass; 
 
-//<--!Skip Buck Fixng this practice controller and output file delete if neccesary
-//before handing in. Also delete dd(): , dumps, $debugs --> 
+class StoreNewSites {    
+    public $results; 
+    public function__construct$newSitesData 
+   
 
 
 $sites = new Sites();  
+{}
        
         $sites->title = $newSitesData->title; 
         $sites->description = $newSitesData->description;  
@@ -23,6 +25,7 @@ $sites = new Sites();
    $this->results->title=book->title;   
 
    $action = StoreNewSites();  
+
+}
    
-       
- 
+     
