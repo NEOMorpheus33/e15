@@ -7,5 +7,5 @@ Your List
 @section('content')
 <h1>Your List</h1>
 
-<p>This page will display all the books on your list...</p>
+<p>This page will display all the sites on your list...</p>
 @endsection
