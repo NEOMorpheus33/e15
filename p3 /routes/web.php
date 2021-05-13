@@ -27,6 +27,7 @@ Route::get('/show', [JoeSearchController::class, 'process']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'index']);
 Route::get('/JoeBotArrays', [JoeSearchController::class, 'index']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'processite']);
+Route::get('/Actions/Fortify/UpdateUserProfileInformation', [JoeSearchController::class, 'index']);
 
 // JSearch Developer Blog PostController Code
 
