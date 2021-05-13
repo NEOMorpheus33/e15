@@ -1,19 +1,15 @@
 @extends('layouts/main')
 @section('Search')
 
-<?php
+{{--Authors/Authoring--}}
+{{--/*Joe PF Fanning JPFF --}}
+{{--/*Dr. Buck. --}}
+{{--/*Harvard University. --}}
+{{--/*Harvard Extension School. --}}
+{{--/* https://www.extension.harvard.edu. --}}
+{{--/*JSearch Logo*/ --}}
 
-/*Authors/Authoring */
-/*Joe PF Fanning JPFF */
-/*Dr. Buck.*/
-/*Harvard University.*/
-/*Harvard Extension School.*/
-/* https://www.extension.harvard.edu.*/
-/*JSearch Logo*/
-
-?>
-
-<a href='www.e15p3.harvardjoeapps.com'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a>
+<a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='JSLogo4'> </a>
 
 <nav>
     <ul>
@@ -34,6 +30,8 @@
     </ul>
 </nav>
 
+<?php
+
 @if(Auth::user())
 <h2>
     Hello {{ Auth::user()->name }}!
@@ -47,14 +45,12 @@
 
 <table>
     <form action="/process" method="GET">
-
         <tr>
             <td><input type="text" name="JoeSearch" value=" "> </td>
         </tr>
         <tr>
             <td><label for="text">Type Keywords Search</label></td>
         </tr>
-
         <tr>
             <td><input type="checkbox" name="PrivateSearch" value=" "> </td>
         </tr>
@@ -94,3 +90,5 @@
 @endif
 
 @endsection
+
+?>
