@@ -1,11 +1,10 @@
 @extends('layouts/main')
+
 @section('title')
-
 Your List
-
 @endsection
 
-@section('Search')
+@section('content')
 <h1>Your List</h1>
 
 <p>This page will display all the sites on your list...</p>
@@ -16,9 +15,9 @@ Your List
 <div style="overflow-x"> 
 
 <table>     
-        <tr><td>{{$ites->url}} </td></tr>    
-        <tr><td>{{$sites->title}} </td></td>  
-        <tr><td>{{$sites->description}} </td></tr> 
+        <tr><td>{{$itess->url}} </td></tr>    
+        <tr><td>{{$sitess->title}} </td></td>  
+        <tr><td>{{$sitess->description}} </td></tr> 
         <tr><td>{{$sites->body}} </td></tr>  
 </table> 
 </div> 

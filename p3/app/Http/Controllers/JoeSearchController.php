@@ -5,11 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Http\Request;
 use DOMDocument;
-use App\Models\Serp;
+use App\Models\Serps;
 use App\Models\create;
 use App\Models\Site;
-use App\Actions\Sites\StorenewSites;
-
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
 
@@ -19,25 +17,22 @@ class JoeSearchController extends Controller
     {
         //$sites = Site::orderBy('url', 'ASC')->get();
         //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
-        //$newSites = $sites->sortByDesc('id')->take(3);
+        // $newSites = $sites->sortByDesc('id')->take(3);
 
         $serps = session('serps');
 
         return view('index', ['serps' => $serps]);
     }
 
-    //  'serps',  // <-- This will be available in the view as $project
-    //  $serps  // <-- This will be contained in the $project variable in the view
-    
     public function processite()
     {
-        //$sites = Site::orderBy('url', 'ASC'v)->get();
+        //$sites = Site::orderBy('url', 'ASC')->get();
         //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
-        //$newSites = $sites->sortByDesc('id')->take(3);
+        // $newSites = $sites->sortByDesc('id')->take(3);
 
-        $sites = session('sites');
+        $serps = session('sites');
 
-        return view('index', ['sites' => $sites]);
+        return view('index', ['sitess' => $sites]);
     }
    
 
@@ -55,47 +50,61 @@ class JoeSearchController extends Controller
     //serps::delete($id); # Delete my site submitted
 
     
-    //public function store(Request $request)
-    # Instantiate a new Site Model object
-    // {
-    // $sites = new Site();
+    public function store(Request $request)
+        # Instantiate a new Site Model object
+    {
+        $sites = new Site();
 
-    //$request->validate([
+        $request->validate([
         
-    //'url'=>'required|max:25',
-    //'title'=>'required|max:100',
-    //'description'=>'required|max:200',
-    //]);
+            'url'=>'required|max:25',
+            'title'=>'required|max:100',
+            'description'=>'required|max:200',
+            ]);
 
-    # Invoke the Eloquent `save` method to generate a new row in the
-    # `sites` table, with the above data
-
-    //$action = new StoreNewSites((object)$request->all());
-        
-    //return redirect('/CRUD/create')
-    //->with(['/' => 'The Sites “'.$sites->$action->results->title,$sites->url, $sites->description,
-    //$sites->body, $sites->sitemapxml,
-    // ' was added.']);
-
-        
-    //}
-
-
-    # Set the properties
-    # Note how each property corresponds to a column in the table
+        $sites->url = 'url';
+        $sites->title = 'information';
+        $sites->description = 'description';
+        $sites->body = 'body';
+        $sites->sitemapxml = 'sitemapxml';
+     
+        # Invoke the Eloquent `save` method to generate a new row in the
+        # `sites` table, with the above data
     
-    // return redirect('CRUD/create')->with(['flash-alert' => 'Your site '.$sites->title.' was added.']);
-    
+        $sites->save();
 
-   
+        return redirect('/CRUD/create')
+        ->with(['/' => 'The Sites “'.$sites->title,$sites->url, $sites->description,
+        $sites->body, $sites->sitemapxml,
+        '” was added.']);
+
+        
+        {
+        
+    }
+
+
+        # Set the properties
+        # Note how each property corresponds to a column in the table
+    
+        
+
+        return redirect('CRUD/create')->with(['flash-alert' => 'Your site '.$sites->title.' was added.']);
+    }
+
+    //process Request
+
+    //public function process(Request $request
+    //{
+
     public function process(Request $request)
     {
-        //  $startUrl = "https://www.harvard.edu";
-        //$details = $this->get_details($startUrl);
+        $startUrl = "https://www.harvard.edu";
+        $details = $this->get_details($startUrl);
 
         //create an empty instance of our model right below
 
-        //$serps = new Serp();
+        $serps = new Serps();
         $body = $details['body'];
         $searchTerms = $request->JoeSearch;
 
@@ -113,13 +122,14 @@ class JoeSearchController extends Controller
         # Search within the $body for the $request->JoeSearch
         # Found the location of the search terms in the body
         # To get context, get substring to the left and right of the location
-        
         $searchTermLocation = strpos($body, $searchTerms);
-    
+        
+       
         $serps->url = $details['url'];
         $serps->title = $details['title'];
         $serps->description = $details['description'];
         $serps->body = $details['body'];
+        
         $serps->save();
         
         return redirect('/')->with(['serps' => $serps]);
@@ -127,7 +137,7 @@ class JoeSearchController extends Controller
     
     public function get_details($url)
     {
- 
+
         // The array that we pass to stream_context_create() to modify our User Agent.
         $options = [
             'http' => [
@@ -177,27 +187,31 @@ class JoeSearchController extends Controller
             'description' => str_replace("\n", "", $description),
             'body' => str_replace("\n", "", $body)
         ];
-    }
+
+        /**
+     * PUT /books
+    */
     
-    public function update(Request $request, $sites)
-    {
-        $sites = Site::where('sites', '=', $slug)->first();
+        function update(Request $request, $sites)
+        {
+            $sites = Site::where('sites', '=', $slug)->first();
 
-        $request->validate([
-        'title' => 'required',
-        'url' => 'required|unique:books,url,'.$sites->id.'|max:1000',
-        'description' => 'required',
-        'body' => 'required|max:10000',
-        'sitemapxml' => 'sitemapxml',
-        ]);
+            $request->validate([
+            'title' => 'required',
+            'url' => 'required|unique:books,url,'.$sites->id.'|max:1000',
+            'description' => 'required',
+            'body' => 'required|max:10000',
+            'sitemapxml' => 'sitemapxml',
+    ]);
 
-        $sites->sites = $request->old('sites');
-        $url->url = $request->old('url');
-        $description->description = $request->old('description');
-        $body->body = $request->old('body');
-        $sitemapxml->sitemapxml = $request->old('sitemapxml');
-        $book->save();
+            $sites->title = $request->title;
+            $sites->url = $request->url;
+            $book->description = $request->description;
+            $book->body = $request->body;
+            $book->sitemapxml = $sitemapxml;
+            $book->save();
 
-        return redirect('/create'.$sites.'/edit')->with('sites => $sites');
+            return redirect('/create'.$sites.'/edit')->with('sites => $sites');
+        }
     }
 }

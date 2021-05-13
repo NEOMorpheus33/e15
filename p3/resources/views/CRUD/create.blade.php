@@ -1,77 +1,47 @@
-<?php  
+@extends('layouts/main')       
 
-@extends('layouts/main') 
-@section ('Search')
 
-<link href='style.css' rel='stylesheet'>
-<h1>Add a Site Below for Faster Indexing Similar to Google Console</h1>
-
-<!DOCTYPE HTML>
-
-<html>
-<head>
-</head>
-<body>
-
+<link href='style.css' rel='stylesheet'> 
+<h1>Add a Site Below for Faster Indexing Similar to Google Console</h1> 
+<table style="width:100%">
+  <tr><td><h1>Add a Site</h1> </td></tr> 
     
-// define variables and set to empty values for sites info list
+    <form method='POST' action='/CRUD/list'> 
+    <div class='details'>* Required fields</div>
+    {{ csrf_field() }} </th> 
+  </tr>
+  <tr>
+    <td><label for='title'>* Title</label>
+    <input type='text' name='title' id='title' value='{{ old("title") }}'> 
+    @include('includes/error-field', ['fieldName' => 'title'])</td>  </tr>
+  
 
-$name = $email = $url = $title = $description= $body=""; 
+    <td><label for='url'>* Site URL</label>  
+    <input type='url' name='url' id='url' value='{{ old("url") }}'>
+    @include('includes/error-field', ['fieldName' => 'url'])</td></tr> 
+    
+    
+    <tr><td><label for='description'>* descripton</label> 
+    <input type='text' name='description' id='description' value='{{ old("description") }}'>
+    @include('includes/error-field', ['fieldName' => 'description'])</td> </tr> 
+    
+    <tr></td><label for='body'>* Body </label>
+    <input type='text' name='body' id='body' value='{{ old("body") }}'>
+    @include('includes/error-field', ['fieldName' => 'body'])  </td></tr>
+ 
+ 
+  <tr><td> <label for='sitemapxml'>* sitemapxml </label>
+    <input type='text' name='sitemapxml' id='sitemapxml' value='{{ old("sitemapxml") }}'>
+    @include('includes/error-field', ['fieldName' => 'sitemapxml']) <td></tr>
+    
+    <tr><td><button type='submit' class='btn btn-primary'>Add My Site</button></td> </tr> 
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-    $body = test_input($_POST["body"]);
-    $url = test_input($_POST["url"]);
-    $title = test_input($_POST["title"]);
-    $description = test_input($_POST["description"]);
-}
+    </form>  
+    
+   </table> 
 
-function test_input($data) 
-{
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
-?>
+  @endsection 
 
 
-<!-- <input type="text" name="title" value="old'title'"psuedo code -->
-<!-- <class="aterrorparentheses'title'parentheses is-invalid atenderror" *Pseudocode> -->
 
-<h2>List Your Site</h2>
 
-<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    URL: <input type="text" class="@error('url') is-invalid @enderror"> name="url" value="{{ old('url') }}">
-    <br><br>
-    description: <input type="text" class="@error('description') is-invalid @enderror"> name="description" value="{{ old('description') }}">
-    <br><br>
-    title: <input type="text" class="@error('title') is-invalid @enderror"> name="title" value="{{ old('title') }}">
-    <br><br>
-
-    <br><br>
-    body text: <textarea name="comment" rows="5" cols="40"></textarea>
-    <br><br>
-    Gender:
-    <input type="radio" name="ITPro" value={{ old('ITPro') }} Female <input type="radio" name="gender" value={{ old('NotITPro') }} Male <input type="radio" name="gender" value={{ old('other') }} Other <br>
-    <input type="submit" name="submit" value="Submit">
-
-</form>
-
-<?php
-
-echo "<h1>Your Input Here</h1>";     
-echo @error->($sitemapxml); s 
-echo "<br>";
-echo @error->($body);  
-echo "<br>";
-echo @error->($url); 
-echo @error($description); 
-@enderror->$url;
-echo "<br>";
-echo @error->($$comment); 
-echo "<br>";
-echo $ITPRO; 
-?>
-
-</body>
-</html>
