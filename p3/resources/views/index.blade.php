@@ -13,7 +13,7 @@
 
 ?>
 
-<a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a>
+<a href='www.e15p3.harvardjoeapps.com'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a>
 
 <nav>
     <ul>
@@ -46,7 +46,6 @@
 
 
 <table>
-
     <form action="/process" method="GET">
 
         <tr>
@@ -59,9 +58,6 @@
         <tr>
             <td><input type="checkbox" name="PrivateSearch" value=" "> </td>
         </tr>
-        <tr>
-            <td><label for="PublicSearch"> Private Search </label></td>
-        </tr>
 
 </table>
 
@@ -73,7 +69,6 @@
 <div style="overflow-x">
 
     <table>
-
         <tr>
             <td>{{$serps->url}} </td>
         </tr>
