@@ -1,0 +1,34 @@
+table {        
+    border: 1px solid gray; 
+    color:lavender;
+    padding: 10px; 
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    scroll-padding-bottom: 10px;  
+} 
+
+td {color:crimson;} 
+
+h1 {color:crimson; font:helvetica} 
+
+h2 {color:slategray} 
+
+tr:nth-child(even) {background-color: #f2f2f2;} 
+
+.flash-alert {  
+    background-color: crimson; 
+    width: 100%; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 5px; 
+    font-weight: bold;
+    text-align: center;
+} 
+
+overflow-x:auto      
+
+
+
+

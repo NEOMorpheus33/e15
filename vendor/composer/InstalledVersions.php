@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => '7fbc69e7c2bacfeba7f322c324263a2950a897a2',
+    'reference' => '141138cecdd5826801d357ee5c2f296844deea8d',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => '7fbc69e7c2bacfeba7f322c324263a2950a897a2',
+      'reference' => '141138cecdd5826801d357ee5c2f296844deea8d',
     ),
     'barryvdh/laravel-debugbar' => 
     array (
