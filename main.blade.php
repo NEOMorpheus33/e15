@@ -1,5 +1,5 @@
-<!Doctype html>
-<html lang='en'>
+<?php 
+
 <head>
 
     <title>@yield('title', "Harvard Extension School Calculator | Joseph Fanning")</title>
@@ -13,11 +13,13 @@
 
 <body>
 
-    /* <img src='/images/calc.jpg'><br> */
+    <img src='/images/calc.jpg'>
 
-    <class="h1">Joe's Harvard | HES Grade Calculator </h1>
+    <h1>Joe's Harvard | HES Grade Calculator </h1>
 
-        @yield('content')
+    @yield('Search')
+    @yield('content')
+    @yield ('addsite')
 
 </body>
 </html>

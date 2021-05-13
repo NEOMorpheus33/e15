@@ -1,11 +1,12 @@
 <?php 
+
 @extends('layouts/main') 
 @section('content')
 
-{{ $JoeSearch }} 
-{{ $error }}
-{{ $create }}
-{{ $request }}
+{{JoeSearch}} 
+{{$error}}
+{{$create}}
+{{$request}}
 
 @endsection 
 

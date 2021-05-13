@@ -1,5 +1,6 @@
-@extends('layouts/main') 
+<?php 
 
+@extends('layouts/main') 
 @section('content')
 
 <h1>Register</h1>

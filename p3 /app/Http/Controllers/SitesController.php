@@ -10,10 +10,10 @@ class StoreNewSites {
     public $results; 
     public function__construct$newSitesData 
    
-
+{
 
 $sites = new Sites();  
-{}
+{
        
         $sites->title = $newSitesData->title; 
         $sites->description = $newSitesData->description;  

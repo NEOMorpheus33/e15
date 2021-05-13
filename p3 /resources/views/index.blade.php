@@ -1,3 +1,5 @@
+<?php 
+
 @extends('layouts/main')
 @section('Search')
 
