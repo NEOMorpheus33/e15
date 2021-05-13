@@ -1,8 +1,0 @@
-public function run()
-{
-    $this->call(serpsTableSeeder::class);
-    $this->call(sitesTableSeeder::class);
-    $this->call(UsersTableSeeder::class);
-    $this->call(SerpSiteTableSeeder::class); # Because this seeder is dependent on Sites
-#    and Users, it should be invoked last
-} 
