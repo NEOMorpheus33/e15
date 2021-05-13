@@ -1,10 +1,11 @@
-@extends('layouts/main') 
+<?php
 
+@extends('layouts/main') 
 @section('content')
 
     <h1>Login</h1>
 
-    Don’t have a JSearch account? <a href='/register'>Register for JSeaerch here...</a>
+    Don’t have a JSearch account? <a href='/register'>Register for JSeaerch here.</a>
 
     <form method='POST' action='/login'> 
 

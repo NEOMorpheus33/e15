@@ -1,5 +1,4 @@
-<!Doctype html>
-<html lang='en'>
+<?php 
 
 <title>@yield('title')</title>
 <link href='style.css' rel='stylesheet'>
