@@ -2,7 +2,8 @@
 <html lang='en'>
 <head>
 
-    <title>@yield('title')</title>
+    <title>@yield('title', 'Jsearch | Best Search Engine | Incognito Search Engine')</title>
+
 
     <meta charset='utf-8'>
     <link href=data:, rel=icon>
@@ -52,7 +53,7 @@
     @yield('content')
 
     <footer>
-        @yield('footer')
+        @include('includes/footer')
     </footer>
 </body>
 </html>
