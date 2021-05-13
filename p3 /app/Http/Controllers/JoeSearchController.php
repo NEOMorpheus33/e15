@@ -211,3 +211,5 @@ function get_details($url)
 
          return redirect('/CRUD/create'.$sites.'/edit')->with('sites => $sites');
      }
+
+      
