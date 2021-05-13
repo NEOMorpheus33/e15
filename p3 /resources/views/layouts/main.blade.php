@@ -2,9 +2,9 @@
 
 <title>@yield('title')</title>
 <link href='style.css' rel='stylesheet'>
-<head>@yield('includes/head')</head>
-
-
+<head>@yield('head')</head>
+    <a href="e15p3.harvardjoeapps.com/images/JSLogo4.jpg">
+    <img alt="JSearchLogo" src="e15p3.harvardjoeapps.com/images/JSLogo4.jpg" width="272" height="77" />
 
 @yield('content')
 @yield('Search')
