@@ -8,8 +8,8 @@
 is for SEO. Google hates duplicate pages that don't pass copycape.com, so 
 I use re=canonical to indicate the master version/copy of a page -->
     <a href="https://www.e15p3.harvardjoeapps.com"> rel=canonical</a>
-    <a href="e15p3.loc/images/JSLogo4.jpg">
-        <img alt="JSearch Harvard Logo" src="e15p3.loc/images/JSLogo4.jpg" width="200" height="70">
+    <a href="e15p3.harvardjoeapps.com/images/JSLogo4.jpg">
+        <img alt="JSearch Harvard Logo" src="e15p3.loc/images/JSLogo4.jpg" width="272" height="77" />
 
         <h1>Joe's Harvard Best Search Engine CSCI-E15 Buck</h1>
 </head>
