@@ -38,16 +38,15 @@ class JoeSearchController extends Controller
         $startUrl = "https://www.harvard.edu";
         $details = $this->get_details($startUrl);
         
-        $body = $details['body'];
         $keywords = $request->keywords;
         
         $serps = new Serp();
         $serps->url = $details['url'];
         $serps->title = $details['title'];
         $serps->description = $details['description'];
-        $serps->body = $details['body'];
+        $serps->body = str_replace("\t", "", $details['body']);
         $serps->save();
-        
+
         return redirect('/')->with(['serps' => $serps]);
     }
 
@@ -68,11 +67,11 @@ class JoeSearchController extends Controller
     public function get_details($url)
     {
         $options = [
-                'http' => [
-                'method' => "GET",
-                'headers' => "User-Agent: JoeBot/0.1\n"
+            'http' => [
+            'method' => "GET",
+            'headers' => "User-Agent: JoeBot/0.1\n"
                 ]
-            ];
+        ];
 
         // Create the stream context
         $doc = new DOMDocument();
