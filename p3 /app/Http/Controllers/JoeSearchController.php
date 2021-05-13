@@ -35,9 +35,9 @@ class JoeSearchController extends Controller
     
     public function processite()
     {
-        //$sites = Site::orderBy('url', 'ASC'v)->get();
-        //$newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
-        //$newSites = $sites->sortByDesc('id')->take(3);
+        $sites = Site::orderBy('url', 'ASC')->get();
+        $newBooks = Book::orderBy('id', 'DESC')->limit(3)->get();
+        $newSites = $sites->sortByDesc('id')->take(3);
 
         $sites = session('sites');
 
@@ -47,19 +47,15 @@ class JoeSearchController extends Controller
 
     public function create(Request $request)
     {
-        $sites = new Sites();
-       
-        $sites->title = $newSitesData->title;
-        $sites->description = $newSitesData->description;
-        $sites->body = $newSitesData->body;
-        $sites->sitemapxml = $newSitesData->sitemapxml;
+        $sites = new Site();
+        
+        $sites->title = $request->title;
+        $sites->description = $request->description;
+        $sites->body = $request->body;
+        $sites->sitemapxml = $request->sitemapxml;
         $sites->save();
-   
-        $this->results = newstdClass();
-        $this->results = title();
-
-        $action = StoreNewSites();
-   
+        
+           
         return view('/CRUD/create');
     }
 }
@@ -197,14 +193,13 @@ function get_details($url)
     
      function update(Request $request, $sites)
      {
-         $sites = Site::where('sites', '=', $slug)->first();
+         $sites = Site::where('sites', '=', $sites)->first();
 
          $request->validate([
         'title' => 'required',
-        'url' => 'required|unique:sites,url,'.$sites->id.'|max:1000',
+        'url' => 'required|unique|max:1000',
         'description' => 'required',
         'body' => 'required|max:10000',
-        'sitemapxml' => 'sitemapxml',
         ]);
 
          $sites->sites = $request->old('sites');
@@ -214,5 +209,5 @@ function get_details($url)
          $sitemapxml->sitemapxml = $request->old('sitemapxml');
          $sites->save();
 
-         return redirect('/create'.$sites.'/edit')->with('sites => $sites');
+         return redirect('/CRUD/create'.$sites.'/edit')->with('sites => $sites');
      }
