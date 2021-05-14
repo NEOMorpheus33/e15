@@ -23,6 +23,7 @@ class JoeSearchController extends Controller
     public function index()
     {
         $serps = session('serps');
+        
 
         return view('index', ['serps' => $serps]);
     }
@@ -35,6 +36,7 @@ class JoeSearchController extends Controller
      */
     public function search(Request $request)
     {
+        $search = '';
         $startUrl = "https://www.harvard.edu";
         $details = $this->get_details($startUrl);
         
@@ -114,5 +116,17 @@ class JoeSearchController extends Controller
             'description' => str_replace("\n", "", $description),
             'body' => str_replace("\n", "", $body)
         ];
+
+        function practice14()
+        {
+            $user = User::where('email', '=', 'jill@harvard.edu')->first();
+
+            dump($user->name.' has the following books on their list: ');
+
+            # Note how we can treate the `books` relationship as a dynamic propert ($user->books)
+            foreach ($user->books as $book) {
+                dump($book->title);
+            }
+        }
     }
 }
