@@ -106,7 +106,7 @@
 
 
     
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    <form method="post" action="?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?">
     Name: <input type="text" name="url">
     <br><br>
     title: <input type="text" name="title">
