@@ -90,6 +90,7 @@
    // $description = test_input($_POST["description"]);
 
 
+<<<<<<< HEAD
    // function test_input($data) {
    // $data = trim($data);
    // $data = stripslashes($data);
@@ -129,3 +130,10 @@
 
 
 
+=======
+    
+
+
+</body>
+</html>
+>>>>>>> 40fc0b2811c71f82f37636812e27396bc10f7623
