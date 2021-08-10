@@ -95,41 +95,7 @@
     $description = test_input($_POST["description"]);
 
 
-    function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    $data = save($serps);
-    return $data;
-    }
-
-
-
     
-    <form method="post" action="?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?">
-    Name: <input type="text" name="url">
-    <br><br>
-    title: <input type="text" name="title">
-    <br><br>
-    descripton: <input type="text" name="description">
-    <br><br>
-    body: <textarea name="body" rows="5" cols="40"></textarea>
-    <br><br>
-
-    <input type="submit" name="submit" value="Submit">
-    </form>
-
-
-    echo "<h2>Your Input:</h2>";
-    echo $url;
-    echo "<br>";
-    echo $title;
-    echo "<br>";
-    echo $description;
-    echo "<br>";
-    echo $body;
-    echo "<br>";
-    echo $ITPro;
 
 
 </body>
