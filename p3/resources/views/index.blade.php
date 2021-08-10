@@ -1,13 +1,8 @@
 @extends('layouts/main')
 @section('Search')
 
-<!DOCTYPE HTML>
-<html>
-<head>
-</head>
-<body>
 
-    <?php
+
 
 /*Authors/Authoring */
 /*Joe PF Fanning JPFF */
@@ -78,7 +73,7 @@
 
     <h2>Search Engine Results</h2>
 
-    <?php
+    
     
     // Declaring the variables just below here  
 
@@ -86,22 +81,22 @@
     
 
     // define variables and set to empty values
-    $title = $url = $body = $description  = "";
+   // $title = $url = $body = $description  = "";
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $url = test_input($_POST["url"]);
-    $title = test_input($_POST["title"]);
-    $body = test_input($_POST["body"]);
-    $description = test_input($_POST["description"]);
+   // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   // $url = test_input($_POST["url"]);
+   // $title = test_input($_POST["title"]);
+   // $body = test_input($_POST["body"]);
+   // $description = test_input($_POST["description"]);
 
 
-    function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    $data = save($serps);
-    return $data;
-    }
+   // function test_input($data) {
+   // $data = trim($data);
+   // $data = stripslashes($data);
+   // $data = htmlspecialchars($data);
+   // $data = save($serps);
+   // return $data;
+   // }
 
 
 
@@ -120,17 +115,17 @@
    // </form>
 
 
-    echo "<h2>Your Input:</h2>";
-    echo $url;
-    echo "<br>";
-    echo $title;
-    echo "<br>";
-    echo $description;
-    echo "<br>";
-    echo $body;
-    echo "<br>";
-    echo $ITPro;
+   // echo "<h2>Your Input:</h2>";
+   // echo $url;
+   // echo "<br>";
+   // echo $title;
+   // echo "<br>";
+   // echo $description;
+   // echo "<br>";
+   //  echo $body;
+   // echo "<br>";
+   // echo $ITPro;
 
 
-</body>
-</html>
+
+
