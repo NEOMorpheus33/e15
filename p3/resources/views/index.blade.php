@@ -11,7 +11,7 @@
 
 /*Authors/Authoring */
 /*Joe PF Fanning JPFF */
-/*Dr. Buck.*/
+/*Dr. Buck.*/ 
 /*Harvard University.*/
 /*Harvard Extension School.*/
 /* https://www.extension.harvard.edu.*/
@@ -106,18 +106,18 @@
 
 
     
-    <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    Name: <input type="text" name="url">
-    <br><br>
-    title: <input type="text" name="title">
-    <br><br>
-    descripton: <input type="text" name="description">
-    <br><br>
-    body: <textarea name="body" rows="5" cols="40"></textarea>
-    <br><br>
+   // <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+   // Name: <input type="text" name="url">
+   // <br><br>
+   // title: <input type="text" name="title">
+   // <br><br>
+   // descripton: <input type="text" name="description">
+   // <br><br>
+   // body: <textarea name="body" rows="5" cols="40"></textarea>
+   //<br><br>
 
-    <input type="submit" name="submit" value="Submit">
-    </form>
+   // <input type="submit" name="submit" value="Submit">
+   // </form>
 
 
     echo "<h2>Your Input:</h2>";
