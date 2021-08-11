@@ -1,14 +1,12 @@
 <!Doctype html>        
 <html lang='en'>    
  
-    @yield('includes/title')    
+    @yield(includes/title)    
     <link href='style.css' rel='stylesheet'>  
     @yield('includes/head') 
  
 <body> 
  
- <h1>Joe's Harvard Private Search Engine</h1>    
-    
     @yield('content') 
     @yield('Search') 
     @yield ('crawled') 
@@ -18,7 +16,7 @@
 @endif
 
    <footer> 
-   @yield('footer')
+   @yield('includes/footer')
   </footer>     
 </body> 
 </html>    

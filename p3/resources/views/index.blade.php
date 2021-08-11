@@ -65,9 +65,7 @@
     </table>
 
 
-
-
-    <h2>Search Engine Results</h2>
+ <h2>Search Engine Results</h2>
 
     
    <?php echo  $serps = ""; ?> 
