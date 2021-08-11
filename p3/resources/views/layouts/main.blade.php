@@ -1,14 +1,13 @@
 <!Doctype html>        
 <html lang='en'>    
-<head> 
-    @yield('title')    
+ 
+    @yield('includes/title')    
     <link href='style.css' rel='stylesheet'>  
-    @yield('head') 
-</head> 
-    
+    @yield('includes/head') 
+ 
 <body> 
  
- <h1>Joe's Harvard Best Search Engine CSCI-E15 Buck</h1>   
+ <h1>Joe's Harvard Private Search Engine</h1>    
     
     @yield('content') 
     @yield('Search') 
@@ -18,11 +17,10 @@
     <div class='flash-alert'>{{ session('flash-alert') }}</div>
 @endif
 
-    <footer> 
-    @yield('footer')
-   
-    </footer>     
-  </body> 
+   <footer> 
+   @yield('footer')
+  </footer>     
+</body> 
 </html>    
 
 
