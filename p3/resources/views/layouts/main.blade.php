@@ -1,7 +1,7 @@
 <!Doctype html>        
 <html lang='en'>    
 <head> 
-    <title>@yield(('title')</title>    
+    @yield('title')    
     <link href='style.css' rel='stylesheet'>  
     @yield('head') 
 </head> 
