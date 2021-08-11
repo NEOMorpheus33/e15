@@ -1,18 +1,14 @@
-@extends('layouts/main')
-@section('Search')
+@extends('layouts/main') 
+@section('Search') 
+
+<!-- Authoring -->
+<!-- Joe Paul F. Fanning JPFF Graduate Student -->
+<!--Harvard University Extension School Cambridge Mass. -->
+<!-- https://www.extension.harvard.edu -->
+
+<!--JSearch Logo --> 
 
 
-
-
-/*Authors/Authoring */
-/*Joe PF Fanning JPFF */
-/*Dr. Buck.*/ 
-/*Harvard University.*/
-/*Harvard Extension School.*/
-/* https://www.extension.harvard.edu.*/
-/*JSearch Logo*/
-
-?>
 
     <a href='/'><img src='/images/JSLogo4.jpg' id='logo' alt='Joe Search Engine Logo v1'> </a>
 
@@ -80,60 +76,6 @@
     $serps = ""; 
     
 
-    // define variables and set to empty values
-   // $title = $url = $body = $description  = "";
-
-   // if ($_SERVER["REQUEST_METHOD"] == "POST") {
-   // $url = test_input($_POST["url"]);
-   // $title = test_input($_POST["title"]);
-   // $body = test_input($_POST["body"]);
-   // $description = test_input($_POST["description"]);
-
-
-<<<<<<< HEAD
-   // function test_input($data) {
-   // $data = trim($data);
-   // $data = stripslashes($data);
-   // $data = htmlspecialchars($data);
-   // $data = save($serps);
-   // return $data;
-   // }
-
-
-
-    
-   // <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-   // Name: <input type="text" name="url">
-   // <br><br>
-   // title: <input type="text" name="title">
-   // <br><br>
-   // descripton: <input type="text" name="description">
-   // <br><br>
-   // body: <textarea name="body" rows="5" cols="40"></textarea>
-   //<br><br>
-
-   // <input type="submit" name="submit" value="Submit">
-   // </form>
-
-
-   // echo "<h2>Your Input:</h2>";
-   // echo $url;
-   // echo "<br>";
-   // echo $title;
-   // echo "<br>";
-   // echo $description;
-   // echo "<br>";
-   //  echo $body;
-   // echo "<br>";
-   // echo $ITPro;
-
-
-
-
-=======
-    
-
-
 </body>
 </html>
->>>>>>> 40fc0b2811c71f82f37636812e27396bc10f7623
+ 

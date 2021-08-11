@@ -1,12 +1,13 @@
 <!Doctype html>        
 <html lang='en'>    
 <head> 
-    <title>@yield('title', ('title'))</title>  
+    <title>@yield(('title')</title>    
     <link href='style.css' rel='stylesheet'>  
     @yield('head') 
-</head>
+</head> 
     
 <body> 
+<?php 
  <h1>Joe's Harvard Best Search Engine CSCI-E15 Buck</h1>   
     
     @yield('content') 
