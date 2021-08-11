@@ -17,7 +17,7 @@ Site not found. <a href='/sites'>Add more sites...</a>
 
 <h1>{{ $sites->title }}</h1> 
 
-<p>By {{ $sites->title }} ({{ $sties->url}})</p>
+<p>By {{ $sites->title }} {{ $sties->url}}</p>
 
 <a href='{{ $sites->url }}'>Sites Show...</a>   
 

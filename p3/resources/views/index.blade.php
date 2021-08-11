@@ -70,10 +70,7 @@
     <h2>Search Engine Results</h2>
 
     
-    
-    // Declaring the variables just below here  
-
-    $serps = ""; 
+   <?php echo  $serps = ""; /> 
     
 
 </body>
