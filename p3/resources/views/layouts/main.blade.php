@@ -7,7 +7,7 @@
 </head> 
     
 <body> 
-<?php 
+ 
  <h1>Joe's Harvard Best Search Engine CSCI-E15 Buck</h1>   
     
     @yield('content') 
