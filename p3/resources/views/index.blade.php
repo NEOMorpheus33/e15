@@ -51,7 +51,7 @@
 
 
             <tr>
-                <td><input type="text" name="JoeSearch" value=" "> </td>
+                <td><input type="text" name="JoeSearch" value="$serps "> </td>
             </tr>
             <tr>
                 <td><label for="text">Type Keywords Search</label></td>
