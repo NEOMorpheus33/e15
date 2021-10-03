@@ -131,7 +131,7 @@ return view('index', ['serps' => $serps,'url'=>$url,'title'=>$title,'description
    
 }
 
-  get_details($url)
+ 
 
  
         // The array that we pass to stream_context_create() to modify our User Agent.
