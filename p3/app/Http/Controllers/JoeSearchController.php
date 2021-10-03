@@ -8,6 +8,7 @@ use DOMDocument;
 use App\Models\Serp;
 use App\Models\create;
 use App\Models\Site;
+use App\Models\User;
 use App\Actions\Sites\StorenewSites;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
