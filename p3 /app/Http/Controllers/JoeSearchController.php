@@ -20,10 +20,10 @@ class JoeSearchController extends Controller
         $sites = Site::orderBy('url', 'ASC')->get();
         $newSites = Site::orderBy('id', 'DESC')->limit(3)->get();
         $newSites = $sites->sortByDesc('id')->take(3);
-        $url ='';
-        $title='';
-        $description='';
-        $body='';
+        $url ='url';
+        $title='title';
+        $description='description';
+        $body='body';
 
         $serps = session('serps');
 
