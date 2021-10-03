@@ -6,11 +6,11 @@ use Illuminate\Http\Request;
 use Illuminate\View\FileViewFinder;
 use App\Http\Controllers\PracticeController;
 
-Route::any('/practice/{n?}', [PracticeController::class, 'index']);
+//Route::any('/practice/{n?}', [PracticeController::class, 'index']);
 Route::get('/', [JoeSearchController::class, 'index']);
 Route::get('/process', [JoeSearchController::class, 'process']);
 Route::get('/create', [JoeSearchController::class, 'index']);
-Route::get('/url', [JoeSearchController::class, 'index']);
+//Route::get('/url', [JoeSearchController::class, 'index']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'create']);
 Route::get('/CRUD/create', [JoeSearchController::class, 'process']);
 Route::get('/add', [JoeSearchController::class, 'index']);
