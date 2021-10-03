@@ -44,7 +44,9 @@
 
     <table>
 
-        <form action="/process" method="GET">
+       <!-- // <form action="/process" method="GET"> -->
+        
+        <form action="/process/"{{ $serps }}" method="POST">
 
             <tr>
                 <td><input type="text" name="JoeSearch" value=" "> </td>
