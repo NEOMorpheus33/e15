@@ -128,8 +128,8 @@ class JoeSearchController extends Controller
         # https://www.php.net/manual/en/function.substr.php
 
         # Search within the $body for the $request->JoeSearch
-        # Found the location of the search terms in the body
-        # To get context, get substring to the left and right of the location
+        # Find the location of the search terms in the body
+        # To get context, get substring to the left and right of the location contains php.net see
         $searchTermLocation = strpos($body, $searchTerms);
         
        
@@ -143,6 +143,7 @@ class JoeSearchController extends Controller
         return redirect('/')->with(['serps' => $serps]);
     }
     
+    {
     public function get_details($url)
     {
 
