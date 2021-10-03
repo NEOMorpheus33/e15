@@ -46,10 +46,12 @@
 
        <!-- // <form action="/process" method="GET"> -->
         
-        <form action="/process/"{{ $serps }}" method="POST">
+        <form action="/process/"{{$serps}}" method="GET">
+        
+
 
             <tr>
-                <td><input type="text" name="JoeSearch" value=" "> </td>
+                <td><input type="text" name="search" value=" "> </td>
             </tr>
             <tr>
                 <td><label for="text">Type Keywords Search</label></td>
