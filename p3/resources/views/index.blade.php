@@ -70,7 +70,7 @@
  <h2>Search Engine Results</h2>
 
     
-   <?php echo  $serps = ""; ?> 
+   <?php echo  $serps;?> 
     
 
 </body>
