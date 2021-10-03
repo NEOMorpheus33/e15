@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\URL;
+
 use Illuminate\Http\Request;
 use DOMDocument;
 use App\Models\Serp;
 use App\Models\create;
 use App\Models\Site;
-use App\Actions\Sites\StorenewSites;
+use App\Actions\JoeSearch
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
