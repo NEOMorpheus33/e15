@@ -133,7 +133,7 @@ class JoeSearchController extends Controller
         $searchTermLocation = strpos($body, $searchTerms);
         
        
-        $serps->url = $details['url'];
+        //$serps->url = $details['url'];
         $serps->title = $details['title'];
         $serps->description = $details['description'];
         $serps->body = $details['body'];
