@@ -8,6 +8,8 @@
 {{$PrivateSearch}} 
 {{$list}}   
 {{$serps}}
-{{searchTerms}}  
+{{searchTerms}} 
+{{$search}}
+{{$serps}}
  @endsection 
 
